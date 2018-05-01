@@ -1,0 +1,31 @@
+﻿
+
+@model MusicZone.Models.Banda
+
+<body>
+
+    <h2>Foi adicionada a seguinte banda:</h2>
+    <ul>
+        <li>@Model.Nome</li>
+        <li>@Model.Numeroelementos</li>
+        <li>@Model.Genero</li>
+        <li>
+            @if (Model.Top)
+            {
+                @:Sim
+
+            }
+            else
+            {
+                @:Não
+
+            }
+    </li>
+</ul>
+
+<a asp-controller="Bandas" asp-action="NovaBanda" class="btn btn-success">Adicionar outra banda</a>
+<a asp-controller="Bandas" asp-action="Index" class="btn btn-primary">Voltar às Bandas</a>
+
+
+</body>
+

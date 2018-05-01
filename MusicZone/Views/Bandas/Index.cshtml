@@ -1,0 +1,31 @@
+﻿@model List<MusicZone.Models.Banda>
+
+
+
+@if (Model.Count == 0)
+{
+
+<h2>"Sem bandas ainda..."</h2>
+
+}
+
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Numero de Elementos</th>
+        <th>Genero</th>
+    </tr>
+    @foreach (MusicZone.Models.Banda b in Model)
+
+    {
+        <tr>
+            <td>@b.Nome</td>
+            <td>@b.Numeroelementos</td>
+            <td>@b.Genero</td>
+        </tr>
+    }
+
+</table>
+
+<button type="button" class="btn btn-secondary"><a asp-controller="Bandas" asp-action="NovaBanda" class="glyphicon-plus">Adicionar Banda</a></button>
